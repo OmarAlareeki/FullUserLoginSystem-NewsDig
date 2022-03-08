@@ -41,9 +41,15 @@ const Login = () => {
           Password<input className={styles.input} type="password" value={password}
             onChange={({ target }) => setPassword(target.value)} />
           <br />
-          <div style={{display: 'flex', flexDirection: 'row'}}>
+          <div style={{ display: 'flex', flexDirection: 'row' }}>
             <button className={styles.button} type="submit">Login</button>
-            <button><AiFillGoogleCircle style={{color: '#343a40'}}/></button>
+            <button><AiFillGoogleCircle
+              style={{
+                color: '#343a40',
+                fontSize: '3.5rem',
+                background: 'none',
+                border: 'none'
+              }} /></button>
           </div>
         </form>
       </Container>
