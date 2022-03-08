@@ -1,0 +1,46 @@
+.alink {
+    border: 1px solid #ADB5BD;
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    transition: 0.3s;
+    color: #212529;
+}
+
+.alink:hover {
+    border: none;
+    background: linear-gradient(to right,#DEE2E6 50%, #6C757D 50%);
+    background-size: 100% 100%;
+    background-position:left right;
+    color: #6C757D;
+}
+
+.input {
+    border: none;
+    background: #343A40;
+    color: #F8F9FA;
+    padding: 8px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1rem;
+    outline: none;
+    margin: 5px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    font-size: .8rem
+}
+
+.button {
+    padding: 10px;
+    border: none;
+    width: 160px;
+    margin: auto;
+    margin-top: auto;
+    margin-top: 8px;
+    border-radius: 20px;
+    height: 50px;
+}
