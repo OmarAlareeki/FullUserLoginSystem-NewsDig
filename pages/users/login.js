@@ -43,13 +43,13 @@ const Login = () => {
           <br />
           <div style={{ display: 'flex', flexDirection: 'row' }}>
             <button className={styles.button} type="submit">Login</button>
-            <button><AiFillGoogleCircle
-              style={{
+            <button 
+            style={{
                 color: '#343a40',
                 fontSize: '3.5rem',
                 background: 'none',
                 border: 'none'
-              }} /></button>
+              }}><AiFillGoogleCircle /></button>
           </div>
         </form>
       </Container>
