@@ -10,7 +10,7 @@
 
 .alink:hover {
     border: none;
-    background: linear-gradient(to right,#DEE2E6 50%, #6C757D 50%);
+    background: linear-gradient(to right,#DEE2E6 50%, #363C41 50%);
     background-size: 100% 100%;
     background-position:left right;
     color: #6C757D;
@@ -26,6 +26,7 @@
     font-size: 1rem;
     outline: none;
     margin: 5px;
+    height: 45px;
 }
 
 .form {
@@ -37,7 +38,7 @@
 .button {
     padding: 10px;
     border: none;
-    width: 160px;
+    width: 150px;
     margin: auto;
     margin-top: auto;
     margin-top: 8px;

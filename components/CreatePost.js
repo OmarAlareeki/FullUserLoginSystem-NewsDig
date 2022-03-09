@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import fire from '../config/fire-config';
+import { Container } from '@chakra-ui/react'
 
 
 const CreatePost = () => {
@@ -25,7 +26,7 @@ const CreatePost = () => {
   }
 
   return (
-    <div>
+    <Container centerContent>
       <h2>Add Blog</h2>
       {notification}
       <form onSubmit={handleSubmit}>
@@ -41,7 +42,7 @@ const CreatePost = () => {
         </div>
         <button type="submit">Save</button>
       </form>
-    </div>
+    </Container>
   )
 }
 export default CreatePost;
