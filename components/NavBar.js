@@ -10,7 +10,9 @@ const NavBar = props => {
         <div style={{
             background: 'linear-gradient(120deg, #fff 0%, #343A40 100%)',
             display: 'flex',
-            justifyContent: ' space-between'
+            justifyContent: ' space-between',
+            position: 'fixed',
+            width: '100%'
         }}>
             <Image
                 alt='NewsDig'
