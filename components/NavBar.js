@@ -18,7 +18,7 @@ const NavBar = props => {
                 alt='NewsDig'
                 src='../newsDigLogo.png'
                 style={{
-                    height: '80px',
+                    height: '60px',
                 }}
                 onClick={() => { router.push('/') }}
             />
