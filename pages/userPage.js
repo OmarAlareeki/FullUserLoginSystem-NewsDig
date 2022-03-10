@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import NavBar from '../components/NavBar';
 import { Container, Button } from '@chakra-ui/react';
 
-const userPage = props => {
+const UserPage = props => {
     const router = useRouter();
     return (
         <>
@@ -19,4 +19,4 @@ const userPage = props => {
     )
 }
 
-export default userPage
+export default UserPage
