@@ -1,11 +1,12 @@
 .alink {
-    border: 1px solid #ADB5BD;
     width: 200px;
     text-align: center;
     padding: 20px;
     margin: 10px;
+    background: #DEE2E6;
     transition: 0.3s;
     color: #212529;
+    transition-delay: .9sec ease-in-out
 }
 
 .alink:hover {

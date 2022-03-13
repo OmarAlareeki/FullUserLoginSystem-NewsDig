@@ -6,8 +6,9 @@ import NavBar from '../../components/NavBar';
 import { Container } from '@chakra-ui/react';
 import { Input } from '@chakra-ui/react';
 import styles from '../../styles/RegisterOrLogin.module.css'
-import { AiFillGoogleCircle } from 'react-icons/ai'
+import { AiFillGoogleCircle } from 'react-icons/ai';
 
+var provider = new fire.auth.GoogleAuthProvider();
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -28,6 +29,34 @@ const Login = () => {
         setPassword('')
         router.push("/")
     }
+
+    function googleSignInPopup(provider) {
+        // [START auth_google_signin_popup]
+        fire.auth()
+          .signInWithPopup(provider)
+          .then((result) => {
+            alert('YOU ARE LOGGED IN WITH GOOGLE')
+            var credential = result.credential;
+            console.log(credential)
+      
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+            // ..
+          }).catch((error) => {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+          });
+        // [END auth_google_signin_popup]
+      }
+      
     return (
         <div>
             <NavBar />
@@ -44,6 +73,7 @@ const Login = () => {
                     <div style={{ display: 'flex', flexDirection: 'row' }}>
                         <button className={styles.button} type="submit">Login</button>
                         <button
+                            onClick={() => googleSignInPopup(provider)}
                             style={{
                                 color: '#343a40',
                                 fontSize: '3.5rem',
