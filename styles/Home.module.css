@@ -108,6 +108,15 @@
   margin-left: 0.5rem;
 }
 
+.createPost {
+  padding: 10px;
+  position: relative;
+  top: 20px;
+  border-radius: 0px 20px 0px 0px;
+  background: gray;
+  color: wheat;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

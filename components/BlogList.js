@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import fire from '../config/fire-config'
 import Link from 'next/link';
+import { Container } from '@chakra-ui/react'
 
 const BlogList = props => {
     const [blogs, setBlogs] = useState([]);
@@ -17,7 +18,7 @@ const BlogList = props => {
     }, []);
 
     return (
-        <div>
+        <Container centerContent style={{marginTop: '20px'}}>
             <ul>
                 {blogs.map(blog =>
                     <li key={blog.id}>
@@ -27,7 +28,7 @@ const BlogList = props => {
                     </li>
                 )}
             </ul>
-        </div>
+        </Container>
     )
 }
 
