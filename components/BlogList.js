@@ -5,6 +5,7 @@ import { Container } from '@chakra-ui/react'
 
 const BlogList = props => {
     const [blogs, setBlogs] = useState([]);
+
     useEffect(() => {
         fire.firestore()
             .collection('blog')
@@ -13,10 +14,10 @@ const BlogList = props => {
                     id: doc.id,
                     ...doc.data()
                 }));
-                setBlogs(blogs);
+                setBlogs(blogs)
             });
     }, []);
-
+    console.log(blogs)
     return (
         <Container centerContent style={{marginTop: '20px'}}>
             <ul>
